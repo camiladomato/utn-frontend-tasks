@@ -150,3 +150,92 @@
 .btn-delete-task:hover {
   color: #d93838;
 }
+/* --- MODAL (NUEVA TAREA) --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 23, 30, 0.4); /* Fondo grafito transparente */
+  backdrop-filter: blur(4px); /* Difumina sutilmente el dashboard de fondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-card {
+  background: var(--bg-card);
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 460px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-card h3 {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 24px;
+}
+
+/* Reutilizamos form-group, solo estilizamos la textarea para la descripción */
+.form-group textarea {
+  padding: 14px 16px;
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: calc(var(--radius) - 4px);
+  font-size: var(--font-sm);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  outline: none;
+  resize: none; /* Bloquea que el usuario rompa el diseño estirándolo */
+  height: 100px;
+  transition: var(--transition);
+}
+
+.form-group textarea:focus {
+  border-color: var(--primary);
+  background-color: var(--bg-card);
+  box-shadow: 0 0 0 3px rgba(90, 36, 147, 0.1);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.btn-cancel {
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 12px 20px;
+  border-radius: calc(var(--radius) - 4px);
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-cancel:hover {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
