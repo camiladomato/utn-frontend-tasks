@@ -1,12 +1,22 @@
-import React from 'react'
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+import Register from './pages/Register';
 
 function App() {
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px', fontFamily: 'sans-serif' }}>
-      <h1>¡Proyecto Inicializado con Éxito! 🚀</h1>
-      <p>React + Vite configurados a mano sin depender de la caché.</p>
-    </div>
-  )
+    <main>
+      <Routes>
+        
+        <Route path="*" element={<Navigate to="/login" />} />
+      
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </main>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,44 @@
+/* Importamos una tipografía espectacular de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* --- PALETA DE COLORES --- */
+  --bg-main: #FAFAFC;          /* Fondo general ultra limpio */
+  --bg-card: #FFFFFF;          /* Fondo de tarjetas y contenedores */
+  --primary: #5A2493;          /* Violeta con presencia, moderno */
+  --primary-hover: #451A73;    /* Violeta más oscuro para interacción */
+  --primary-light: #F3EBF9;    /* Lavanda sutil para detalles y fondos ligeros */
+  --text-main: #1A171E;        /* Texto oscuro con personalidad */
+  --text-muted: #7C7883;       /* Gris lavado para subtítulos o datos secundarios */
+  --border-color: #E6E4EA;     /* Bordes finitos y limpios */
+
+  /* --- TIPOGRAFÍA --- */
+  --font-family: 'Plus Jakarta Sans', sans-serif;
+
+  /* --- ESCALA DE TAMAÑOS (Minimalista) --- */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 20px;
+  --font-xl: 28px;
+
+  /* --- BORDES Y SOMBRAS --- */
+  --radius: 12px;              /* Bordes redondeados pero sutiles */
+  --shadow: 0 4px 20px rgba(90, 36, 147, 0.04); /* Sombra ultra suave texturada con violeta */
+  --transition: all 0.2s ease;
+}
+
+/* RESETEO UNIVERSAL MINIMALISTA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
